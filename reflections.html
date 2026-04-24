@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflections – Wellness Super App</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="reflections.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════ -->
+  <nav class="navbar">
+    <a class="navbar__brand" href="index.html">
+      <div class="navbar__brand-icon">🌿</div>
+      Wellness Super App
+    </a>
+    <div class="navbar__links">
+      <a href="index.html"                               >🏠 Home</a>
+      <a href="data.html"                                >📋 Data Gathering</a>
+      <a href="results.html"                             >📊 Results</a>
+      <a href="reflections.html" class="nav--active"     >💬 Reflections</a>
+    </div>
+    <button class="navbar__toggle" aria-label="Toggle menu">☰</button>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════
+       PAGE HERO BAR
+  ═══════════════════════════════════ -->
+  <div class="page-hero-bar">
+    <span class="page-hero-bar__badge">💬 Reflections</span>
+    <h1 class="page-hero-bar__title">What We Learned</h1>
+    <p class="page-hero-bar__sub">Personal reflections from each group member on the HCI2 design and evaluation process.</p>
+  </div>
+
+
+  <!-- ═══════════════════════════════════
+       INDIVIDUAL REFLECTIONS
+  ═══════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <span class="sec-badge">🧑‍💻 Member Reflections</span>
+      <h2 class="sec-title">Individual Takeaways</h2>
+      <p class="sec-sub">Each member reflects on their assigned screen and what they discovered through heuristic evaluation and usability testing.</p>
+
+      <div class="reflections-list">
+
+        <!-- Jodelyn -->
+        <div class="reflection-card">
+          <div class="reflection-card__header">
+            <div class="reflection-card__avatar" style="background:var(--green-light);border:2px solid var(--green);">👩</div>
+            <div class="reflection-card__info">
+              <h4 class="reflection-card__name">Jodelyn</h4>
+              <span class="reflection-card__role badge badge--green">UI Lead</span>
+              <p class="reflection-card__screen">Screen 5 – Mood Tracker &amp; Diary</p>
+            </div>
+            <div class="reflection-card__screen-num">05</div>
+          </div>
+          <blockquote class="reflection-card__quote">
+            "Designing the Mood Tracker taught me how important emotional UX is."
+          </blockquote>
+          <p class="reflection-card__text">
+            I learned that a simple intensity slider can confuse new users without proper guidance. Heuristic evaluation opened my eyes to details I never noticed during design — like the missing validation messages when saving without selecting a mood. Going forward, I will always think about error states and empty states first before finalizing any screen design.
+          </p>
+          <div class="reflection-card__tags">
+            <span class="badge badge--green">Error States</span>
+            <span class="badge badge--green">Emotional UX</span>
+            <span class="badge badge--green">Validation</span>
+          </div>
+        </div>
+
+        <!-- Julius -->
+        <div class="reflection-card" style="border-left-color:var(--blue);">
+          <div class="reflection-card__header">
+            <div class="reflection-card__avatar" style="background:var(--blue-light);border:2px solid var(--blue);">👨</div>
+            <div class="reflection-card__info">
+              <h4 class="reflection-card__name">Julius</h4>
+              <span class="reflection-card__role badge badge--blue">Developer</span>
+              <p class="reflection-card__screen">Screen 6 – Home Dashboard</p>
+            </div>
+            <div class="reflection-card__screen-num" style="color:var(--blue);opacity:0.12;">06</div>
+          </div>
+          <blockquote class="reflection-card__quote" style="border-left-color:var(--blue);">
+            "Visual clutter is invisible to the designer but obvious to the user."
+          </blockquote>
+          <p class="reflection-card__text">
+            Working on the Home Dashboard showed me how easy it is to create visual clutter unintentionally — I had duplicate progress rings that confused testers. Having teammates evaluate my screen gave me a perspective I could not see on my own. I now understand that consistency and user control are not optional design choices — they are fundamental HCI requirements that affect every single user interaction.
+          </p>
+          <div class="reflection-card__tags">
+            <span class="badge badge--blue">Consistency</span>
+            <span class="badge badge--blue">User Control</span>
+            <span class="badge badge--blue">Visual Hierarchy</span>
+          </div>
+        </div>
+
+        <!-- Celes -->
+        <div class="reflection-card" style="border-left-color:var(--yellow);">
+          <div class="reflection-card__header">
+            <div class="reflection-card__avatar" style="background:var(--yellow-light);border:2px solid var(--yellow);">👩</div>
+            <div class="reflection-card__info">
+              <h4 class="reflection-card__name">Celes</h4>
+              <span class="reflection-card__role badge badge--yellow">Researcher</span>
+              <p class="reflection-card__screen">Screen 3 – Daily Planner</p>
+            </div>
+            <div class="reflection-card__screen-num" style="color:var(--yellow);opacity:0.18;">03</div>
+          </div>
+          <blockquote class="reflection-card__quote" style="border-left-color:var(--yellow);">
+            "Real users always see your app differently than you do."
+          </blockquote>
+          <p class="reflection-card__text">
+            I realized that a "simple" planner screen has many hidden usability decisions — where to place the Add button, how to show completed tasks, what happens when you delete something. Testing with real respondents was the most valuable part of this project. They found issues we never expected, like the header feeling too empty and lacking a greeting. Real feedback humbles you as a designer.
+          </p>
+          <div class="reflection-card__tags">
+            <span class="badge badge--yellow">Usability Testing</span>
+            <span class="badge badge--yellow">Layout Balance</span>
+            <span class="badge badge--yellow">User Feedback</span>
+          </div>
+        </div>
+
+        <!-- Meljun -->
+        <div class="reflection-card" style="border-left-color:var(--purple);">
+          <div class="reflection-card__header">
+            <div class="reflection-card__avatar" style="background:var(--purple-light);border:2px solid var(--purple);">👨</div>
+            <div class="reflection-card__info">
+              <h4 class="reflection-card__name">Meljun</h4>
+              <span class="reflection-card__role badge" style="background:var(--purple-light);color:#6a3eaa;">Designer</span>
+              <p class="reflection-card__screen">Screen 4 – Habit Tracker</p>
+            </div>
+            <div class="reflection-card__screen-num" style="color:var(--purple);opacity:0.12;">04</div>
+          </div>
+          <blockquote class="reflection-card__quote" style="border-left-color:var(--purple);">
+            "Color alone is not enough — you need labels, shapes, and context."
+          </blockquote>
+          <p class="reflection-card__text">
+            The Habit Tracker was the most complex screen because it had to communicate multiple states — done, in progress, missed — all at once. I learned that color alone is not enough for accessibility; you also need labels and distinct shapes. The biggest lesson was about help documentation — I assumed users would intuitively understand the dot color system, but usability testing proved that assumption completely wrong.
+          </p>
+          <div class="reflection-card__tags">
+            <span class="badge" style="background:var(--purple-light);color:#6a3eaa;">Accessibility</span>
+            <span class="badge" style="background:var(--purple-light);color:#6a3eaa;">Multi-State UI</span>
+            <span class="badge" style="background:var(--purple-light);color:#6a3eaa;">Affordance</span>
+          </div>
+        </div>
+
+        <!-- Mark -->
+        <div class="reflection-card" style="border-left-color:var(--red);">
+          <div class="reflection-card__header">
+            <div class="reflection-card__avatar" style="background:var(--red-light);border:2px solid var(--red);">👨</div>
+            <div class="reflection-card__info">
+              <h4 class="reflection-card__name">Mark</h4>
+              <span class="reflection-card__role badge badge--red">Tester</span>
+              <p class="reflection-card__screen">Screen 7 – Analytics</p>
+            </div>
+            <div class="reflection-card__screen-num" style="color:var(--red);opacity:0.12;">07</div>
+          </div>
+          <blockquote class="reflection-card__quote" style="border-left-color:var(--red);">
+            "Every state of the UI needs to be designed — including the empty ones."
+          </blockquote>
+          <p class="reflection-card__text">
+            Analytics screens are easy to over-engineer. I focused on showing the right data at the right time — productivity trends, mood frequency, and habit consistency. The most humbling moment was realizing our empty states were completely blank. HCI2 taught me that every possible state of the UI needs to be designed, including the ones with no data. Design is not just about the happy path.
+          </p>
+          <div class="reflection-card__tags">
+            <span class="badge badge--red">Empty States</span>
+            <span class="badge badge--red">Data Visualization</span>
+            <span class="badge badge--red">Error Recovery</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       GROUP TAKEAWAYS
+  ═══════════════════════════════════ -->
+  <section class="section section--gray">
+    <div class="container">
+      <span class="sec-badge">🌿 Group Takeaways</span>
+      <h2 class="sec-title">What We Learned as a Team</h2>
+      <p class="sec-sub">Four core lessons from the HCI2 design and evaluation process that will shape our future work.</p>
+
+      <div class="takeaways-grid">
+
+        <div class="takeaway-card">
+          <div class="takeaway-card__icon">🎯</div>
+          <h4 class="takeaway-card__title">Design for Real Users</h4>
+          <p class="takeaway-card__text">Assumptions fail. Testing with 5 respondents revealed issues none of us noticed in 3 weeks of designing. Real feedback is irreplaceable.</p>
+        </div>
+
+        <div class="takeaway-card">
+          <div class="takeaway-card__icon">🔍</div>
+          <h4 class="takeaway-card__title">Heuristics are a Framework</h4>
+          <p class="takeaway-card__text">Nielsen's 10 heuristics gave us a structured lens to evaluate objectively — not just by personal preference or aesthetic taste.</p>
+        </div>
+
+        <div class="takeaway-card">
+          <div class="takeaway-card__icon">♿</div>
+          <h4 class="takeaway-card__title">Accessibility is Non-Negotiable</h4>
+          <p class="takeaway-card__text">Color contrast, tap target sizes, and icon labels are not extras — they are core requirements for all users regardless of ability.</p>
+        </div>
+
+        <div class="takeaway-card">
+          <div class="takeaway-card__icon">🔄</div>
+          <h4 class="takeaway-card__title">Iteration is the Process</h4>
+          <p class="takeaway-card__text">Design → Evaluate → Improve. The prototype we submitted is better because of evaluation, not just initial design effort.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       CLOSING STATEMENT
+  ═══════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="closing-card">
+        <div class="closing-card__icon">🌿</div>
+        <h3 class="closing-card__title">Thank You</h3>
+        <p class="closing-card__text">This project was a collaborative learning experience that combined design, research, and evaluation. The Wellness Super App is our group's commitment to building technology that genuinely supports people's wellbeing — and this evaluation has made it better.</p>
+        <div class="closing-card__team">Jodelyn · Julius · Celes · Meljun · Mark</div>
+        <div class="closing-card__course">HCI2 Final Project · Group 4 · Partido State University · 2026</div>
+        <a href="index.html" class="closing-card__btn">← Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__brand">🌿 Wellness <span>Super App</span></div>
+    <p class="footer__text">HCI2 Final Project · Group 4 · Partido State University, Goa, Camarines Sur<br>Jodelyn · Julius · Celes · Meljun · Mark · © 2026</p>
+  </footer>
+
+  <script src="js/shared.js"></script>
+</body>
+</html>

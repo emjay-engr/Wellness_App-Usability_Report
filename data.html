@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Gathering – Wellness Super App</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link rel="stylesheet" href="data.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════ -->
+  <nav class="navbar">
+    <a class="navbar__brand" href="index.html">
+      <div class="navbar__brand-icon">🌿</div>
+      Wellness Super App
+    </a>
+    <div class="navbar__links">
+      <a href="index.html"                           >🏠 Home</a>
+      <a href="data.html"        class="nav--active" >📋 Data Gathering</a>
+      <a href="results.html"                         >📊 Results</a>
+      <a href="reflections.html"                     >💬 Reflections</a>
+    </div>
+    <button class="navbar__toggle" aria-label="Toggle menu">☰</button>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════
+       PAGE HERO BAR
+  ═══════════════════════════════════ -->
+  <div class="page-hero-bar">
+    <span class="page-hero-bar__badge">📋 Data Gathering</span>
+    <h1 class="page-hero-bar__title">Evaluation Methods & Instruments</h1>
+    <p class="page-hero-bar__sub">All data gathered through consent-based methods following ethical research standards at Partido State University.</p>
+  </div>
+
+
+  <!-- ═══════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════ -->
+  <main class="section">
+    <div class="container">
+
+      <!-- TABS -->
+      <div class="tabs" id="data-tabs">
+        <nav class="tabs__nav">
+          <button class="tabs__btn tab--active" data-tab="consent"      >📄 Consent Form</button>
+          <button class="tabs__btn"             data-tab="respondents"  >👥 Respondents</button>
+          <button class="tabs__btn"             data-tab="heuristic"    >🔍 Heuristic Evaluation</button>
+          <button class="tabs__btn"             data-tab="usability"    >📝 Usability Testing</button>
+          <button class="tabs__btn"             data-tab="docs"         >📸 Documentation</button>
+        </nav>
+
+
+        <!-- ─── TAB: Consent Form ─── -->
+        <div class="tabs__panel tab--active" data-tab="consent">
+          <div class="consent-form">
+
+            <div class="consent-form__header">
+              <p class="consent-form__school">Republic of the Philippines</p>
+              <h3 class="consent-form__uni">Partido State University</h3>
+              <p class="consent-form__loc">Goa, Camarines Sur</p>
+              <div class="consent-form__divider"></div>
+              <h3>Informed Consent Form</h3>
+              <p>HCI2 – Usability Evaluation · Group 4</p>
+            </div>
+
+            <div class="consent-form__body">
+              <p>We, the students of <strong>BSIT</strong> at Partido State University, are conducting a usability evaluation of our prototype called the <strong>Wellness Super App</strong> as part of our HCI2 course requirements.</p>
+              <p>Your participation involves testing the mobile application prototype and answering a short survey. This will take approximately <strong>10–15 minutes</strong>.</p>
+              <p><strong>Your participation is completely voluntary.</strong> You may withdraw at any time without any consequence. All responses will be kept <strong>confidential</strong> and used only for academic purposes.</p>
+              <p>By proceeding with the evaluation, you confirm that you have read and understood this consent form and agree to participate.</p>
+            </div>
+
+            <div class="consent-form__fields">
+              <div class="consent-form__field">
+                <div class="consent-form__field-label">Respondent Signature</div>
+                <div class="consent-form__field-line"></div>
+              </div>
+              <div class="consent-form__field">
+                <div class="consent-form__field-label">Date</div>
+                <div class="consent-form__field-line"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- ─── TAB: Respondents ─── -->
+        <div class="tabs__panel" data-tab="respondents">
+
+          <div class="respondent-stats">
+            <div class="stat-card"><div class="stat-card__val">5</div><div class="stat-card__label">Total Respondents</div></div>
+            <div class="stat-card"><div class="stat-card__val">18–24</div><div class="stat-card__label">Age Range</div></div>
+            <div class="stat-card"><div class="stat-card__val">BSIT</div><div class="stat-card__label">Course</div></div>
+            <div class="stat-card"><div class="stat-card__val">10–15</div><div class="stat-card__label">Min per Session</div></div>
+          </div>
+
+          <div class="card card--flat">
+            <h4 style="margin-bottom:16px;">Respondent Profiles</h4>
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Respondent</th>
+                    <th>Age</th>
+                    <th>Program</th>
+                    <th>Tech Proficiency</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong style="color:var(--green);">R1</strong></td><td>Respondent 1</td><td>20</td><td>BSIT</td><td><span class="badge badge--green">High</span></td></tr>
+                  <tr><td><strong style="color:var(--green);">R2</strong></td><td>Respondent 2</td><td>21</td><td>BSIT</td><td><span class="badge badge--green">High</span></td></tr>
+                  <tr><td><strong style="color:var(--green);">R3</strong></td><td>Respondent 3</td><td>19</td><td>BSIT</td><td><span class="badge badge--yellow">Medium</span></td></tr>
+                  <tr><td><strong style="color:var(--green);">R4</strong></td><td>Respondent 4</td><td>22</td><td>BSIT</td><td><span class="badge badge--green">High</span></td></tr>
+                  <tr><td><strong style="color:var(--green);">R5</strong></td><td>Respondent 5</td><td>20</td><td>BSIT</td><td><span class="badge badge--yellow">Medium</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!-- ─── TAB: Heuristic Evaluation ─── -->
+        <div class="tabs__panel" data-tab="heuristic">
+
+          <p class="heuristic-intro">Each group member independently evaluated the prototype using <strong>Nielsen's 10 Usability Heuristics</strong>. Below is a consolidated summary of all findings.</p>
+
+          <!-- Member sub-tabs -->
+          <div class="tabs" id="member-tabs">
+            <nav class="tabs__nav">
+              <button class="tabs__btn tab--active" data-tab="m-all"    >All Members</button>
+              <button class="tabs__btn"             data-tab="m-jodelyn">Jodelyn</button>
+              <button class="tabs__btn"             data-tab="m-julius" >Julius</button>
+              <button class="tabs__btn"             data-tab="m-celes"  >Celes</button>
+              <button class="tabs__btn"             data-tab="m-meljun" >Meljun</button>
+              <button class="tabs__btn"             data-tab="m-mark"   >Mark</button>
+            </nav>
+
+            <!-- All Members -->
+            <div class="tabs__panel tab--active" data-tab="m-all">
+              <div class="heuristic-list">
+
+                <div class="heuristic-item"><div class="heuristic-item__num">H1</div><div class="heuristic-item__body"><p class="heuristic-item__title">Visibility of System Status <span class="badge badge--green">Low Severity</span></p><p class="heuristic-item__desc">System keeps users informed through appropriate feedback.</p><div class="heuristic-item__finding">✅ Progress rings, streak badges, and checkmarks clearly show status at all times.</div></div></div>
+
+                <div class="heuristic-item"><div class="heuristic-item__num">H2</div><div class="heuristic-item__body"><p class="heuristic-item__title">Match Between System and Real World <span class="badge badge--green">Low Severity</span></p><p class="heuristic-item__desc">Use words and concepts familiar to the user.</p><div class="heuristic-item__finding">✅ Labels use everyday language — "Drink Water", "Workout", "Bed time". Emoji icons reinforce meaning.</div></div></div>
+
+                <div class="heuristic-item"><div class="heuristic-item__num">H3</div><div class="heuristic-item__body"><p class="heuristic-item__title">User Control and Freedom <span class="badge badge--yellow">Medium Severity</span></p><p class="heuristic-item__desc">Clearly marked emergency exits for mistaken actions.</p><div class="heuristic-item__finding">⚠️ Skip and Cancel buttons exist but no undo for deleted habits — a gap found by 3 evaluators.</div></div></div>
+
+                <div class="heuristic-item"><div class="heuristic-item__num">H4</div><div class="heuristic-item__body"><p class="heuristic-item__title">Consistency and Standards <span class="badge badge--green">Low Severity</span></p><p class="heuristic-item__desc">Same words, situations, and actions mean the same thing.</p><div class="heuristic-item__finding">✅ Green header, white cards, and bottom nav are consistent across all 8 screens.</div></div></div>
+
+                <div class="heuristic-item"><div class="heuristic-item__num">H5</div><div class="heuristic-item__body"><p class="heuristic-item__title">Error Prevention <span class="badge badge--yellow">Medium Severity</span></p><p class="heuristic-item__desc">Careful design prevents problems from occurring.</p><div class="heuristic-item__finding">⚠️ Placeholder hints help, but no confirmation dialog before deleting tasks or habits.</div></div></div>
+
+                <div class="heuristic-item"><div class="heuristic-item__num">H6</div><div class="heuristic-item__body"><p class="heuristic-item__title">Recognition Rather Than Recall <span class="badge badge--green">Low Severity</span></p><p class="heuristic-item__desc">Minimize memory load by making options visible.</p><div class="heuristic-item__finding">✅ All icons paired with text labels. No icon-only elements found throughout the prototype.</div></div></div>
+
+                <div class="heuristic-item"><div class="heuristic-item__num">H7</div><div class="heuristic-item__body"><p class="heuristic-item__title">Flexibility and Efficiency of Use <span class="badge badge--yellow">Medium Severity</span></p><p class="heuristic-item__desc">Accelerators for expert users.</p><div class="heuristic-item__finding">⚠️ Quick Actions row helps. However, no swipe gestures available for power users.</div></div></div>
+
+                <div class="heuristic-item"><div class="heuristic-item__num">H8</div><div class="heuristic-item__body"><p class="heuristic-item__title">Aesthetic and Minimalist Design <span class="badge badge--green">Low Severity</span></p><p class="heuristic-item__desc">No irrelevant or rarely needed information.</p><div class="heuristic-item__finding">✅ Each screen focuses on one task. Clean card layouts with ample whitespace.</div></div></div>
+
+                <div class="heuristic-item"><div class="heuristic-item__num">H9</div><div class="heuristic-item__body"><p class="heuristic-item__title">Help Users Recognize and Recover from Errors <span class="badge badge--red">High Severity</span></p><p class="heuristic-item__desc">Error messages in plain language that suggest solutions.</p><div class="heuristic-item__finding">🔴 No error states or validation messages designed for empty forms. Most cited issue by all 5 evaluators.</div></div></div>
+
+                <div class="heuristic-item"><div class="heuristic-item__num">H10</div><div class="heuristic-item__body"><p class="heuristic-item__title">Help and Documentation <span class="badge badge--red">High Severity</span></p><p class="heuristic-item__desc">Help may be necessary even for well-designed systems.</p><div class="heuristic-item__finding">🔴 No onboarding tutorial or tooltip guidance. Intensity slider and streak dots confuse new users.</div></div></div>
+
+              </div>
+            </div>
+
+            <!-- Jodelyn -->
+            <div class="tabs__panel" data-tab="m-jodelyn">
+              <div class="member-eval-header"><div class="member-eval-avatar">👩</div><div><h4>Jodelyn – Screen 5: Mood Tracker & Diary</h4><p>Focus: mood selection, diary entry, past entries, daily check-in flow.</p></div></div>
+              <div class="heuristic-list">
+                <div class="heuristic-item"><div class="heuristic-item__num" style="background:var(--green);">H1</div><div class="heuristic-item__body"><p class="heuristic-item__title">Visibility of System Status <span class="badge badge--green">Pass</span></p><div class="heuristic-item__finding">The 5-day streak badge and blinking cursor in the diary field clearly indicate active state to the user.</div></div></div>
+                <div class="heuristic-item"><div class="heuristic-item__num" style="background:var(--red);">H9</div><div class="heuristic-item__body"><p class="heuristic-item__title">Error Recovery <span class="badge badge--red">Fail</span></p><div class="heuristic-item__finding">No validation shown when saving without selecting a mood. Recommendation: Add prompt "Please select your mood first."</div></div></div>
+                <div class="heuristic-item"><div class="heuristic-item__num" style="background:var(--red);">H10</div><div class="heuristic-item__body"><p class="heuristic-item__title">Help & Documentation <span class="badge badge--red">Fail</span></p><div class="heuristic-item__finding">Intensity slider has no tooltip explaining what "Moderate" means. First-time users may be confused.</div></div></div>
+              </div>
+            </div>
+
+            <!-- Julius -->
+            <div class="tabs__panel" data-tab="m-julius">
+              <div class="member-eval-header"><div class="member-eval-avatar" style="background:var(--blue-light);border-color:var(--blue);">👨</div><div><h4>Julius – Screen 6: Home Dashboard</h4><p>Focus: dashboard summary, quick stats, navigation, overall layout.</p></div></div>
+              <div class="heuristic-list">
+                <div class="heuristic-item"><div class="heuristic-item__num" style="background:var(--green);">H4</div><div class="heuristic-item__body"><p class="heuristic-item__title">Consistency & Standards <span class="badge badge--green">Pass</span></p><div class="heuristic-item__finding">All 8 screens maintain consistent green header, card style, and bottom navigation. Excellent visual consistency.</div></div></div>
+                <div class="heuristic-item"><div class="heuristic-item__num" style="background:var(--yellow);">H7</div><div class="heuristic-item__body"><p class="heuristic-item__title">Flexibility of Use <span class="badge badge--yellow">Partial</span></p><div class="heuristic-item__finding">Quick Actions row helps returning users. No swipe gestures for power users available.</div></div></div>
+                <div class="heuristic-item"><div class="heuristic-item__num" style="background:var(--red);">H3</div><div class="heuristic-item__body"><p class="heuristic-item__title">User Control & Freedom <span class="badge badge--red">Fail</span></p><div class="heuristic-item__finding">Duplicate progress rings in original dashboard caused confusion. No undo for dismissed notifications.</div></div></div>
+              </div>
+            </div>
+
+            <!-- Celes -->
+            <div class="tabs__panel" data-tab="m-celes">
+              <div class="member-eval-header"><div class="member-eval-avatar" style="background:var(--yellow-light);border-color:var(--yellow);">👩</div><div><h4>Celes – Screen 3: Daily Planner</h4><p>Focus: to-do list, schedule, task management, planner layout.</p></div></div>
+              <div class="heuristic-list">
+                <div class="heuristic-item"><div class="heuristic-item__num" style="background:var(--green);">H2</div><div class="heuristic-item__body"><p class="heuristic-item__title">Match with Real World <span class="badge badge--green">Pass</span></p><div class="heuristic-item__finding">Task names, times, and labels use familiar language. "Breakfast", "Gym", "Bed time" are instantly understood.</div></div></div>
+                <div class="heuristic-item"><div class="heuristic-item__num" style="background:var(--yellow);">H5</div><div class="heuristic-item__body"><p class="heuristic-item__title">Error Prevention <span class="badge badge--yellow">Partial</span></p><div class="heuristic-item__finding">No confirmation dialog when deleting a task. Recommendation: Add undo toast "Task deleted. Undo?"</div></div></div>
+                <div class="heuristic-item"><div class="heuristic-item__num" style="background:var(--green);">H8</div><div class="heuristic-item__body"><p class="heuristic-item__title">Aesthetic Design <span class="badge badge--green">Pass</span></p><div class="heuristic-item__finding">After redesign with greeting and progress bar, the layout balance improved significantly.</div></div></div>
+              </div>
+            </div>
+
+            <!-- Meljun -->
+            <div class="tabs__panel" data-tab="m-meljun">
+              <div class="member-eval-header"><div class="member-eval-avatar" style="background:var(--purple-light);border-color:var(--purple);">👨</div><div><h4>Meljun – Screen 4: Habit Tracker</h4><p>Focus: habit list, reminders, day selector, progress tracking.</p></div></div>
+              <div class="heuristic-list">
+                <div class="heuristic-item"><div class="heuristic-item__num" style="background:var(--green);">H1</div><div class="heuristic-item__body"><p class="heuristic-item__title">System Status Visibility <span class="badge badge--green">Pass</span></p><div class="heuristic-item__finding">Checkmarks, progress bars, and streak badges all clearly communicate completion state.</div></div></div>
+                <div class="heuristic-item"><div class="heuristic-item__num" style="background:var(--yellow);">H3</div><div class="heuristic-item__body"><p class="heuristic-item__title">User Control & Freedom <span class="badge badge--yellow">Partial</span></p><div class="heuristic-item__finding">Reminders can be toggled on/off. However, no undo after accidentally marking a habit done.</div></div></div>
+                <div class="heuristic-item"><div class="heuristic-item__num" style="background:var(--red);">H10</div><div class="heuristic-item__body"><p class="heuristic-item__title">Help & Documentation <span class="badge badge--red">Fail</span></p><div class="heuristic-item__finding">Streak dot colors (green/yellow/grey) are not self-explanatory. A color legend is needed.</div></div></div>
+              </div>
+            </div>
+
+            <!-- Mark -->
+            <div class="tabs__panel" data-tab="m-mark">
+              <div class="member-eval-header"><div class="member-eval-avatar" style="background:var(--red-light);border-color:var(--red);">👨</div><div><h4>Mark – Screen 7: Analytics</h4><p>Focus: analytics charts, trend data, and data presentation.</p></div></div>
+              <div class="heuristic-list">
+                <div class="heuristic-item"><div class="heuristic-item__num" style="background:var(--green);">H6</div><div class="heuristic-item__body"><p class="heuristic-item__title">Recognition over Recall <span class="badge badge--green">Pass</span></p><div class="heuristic-item__finding">Charts include labeled axes and color legends. Users do not need to memorize representations.</div></div></div>
+                <div class="heuristic-item"><div class="heuristic-item__num" style="background:var(--yellow);">H7</div><div class="heuristic-item__body"><p class="heuristic-item__title">Flexibility of Use <span class="badge badge--yellow">Partial</span></p><div class="heuristic-item__finding">Day/Week/Month toggle present but no data export or filter by specific habit type.</div></div></div>
+                <div class="heuristic-item"><div class="heuristic-item__num" style="background:var(--red);">H9</div><div class="heuristic-item__body"><p class="heuristic-item__title">Error Recovery <span class="badge badge--red">Fail</span></p><div class="heuristic-item__finding">Empty chart shows blank space with no explanation. Needs empty state: "No data logged yet. Start tracking!"</div></div></div>
+              </div>
+            </div>
+
+          </div><!-- end member-tabs -->
+        </div>
+
+
+        <!-- ─── TAB: Usability Testing ─── -->
+        <div class="tabs__panel" data-tab="usability">
+          <div class="card card--flat">
+            <h4 style="margin-bottom:8px;">Usability Testing Survey Instrument</h4>
+            <p style="margin-bottom:24px;">Respondents interacted with the Figma prototype then answered these questions using a <strong>5-point Likert scale</strong> (1 = Strongly Disagree, 5 = Strongly Agree).</p>
+
+            <div class="survey-list">
+              <div class="survey-q"><div class="survey-q__num">Q1</div><div><p class="survey-q__text">The app was easy to navigate and understand.</p><p class="survey-q__cat">Category: Learnability</p></div></div>
+              <div class="survey-q"><div class="survey-q__num">Q2</div><div><p class="survey-q__text">The design is visually appealing and consistent.</p><p class="survey-q__cat">Category: Aesthetics</p></div></div>
+              <div class="survey-q"><div class="survey-q__num">Q3</div><div><p class="survey-q__text">I can clearly understand what each screen is for.</p><p class="survey-q__cat">Category: Clarity</p></div></div>
+              <div class="survey-q"><div class="survey-q__num">Q4</div><div><p class="survey-q__text">The app would help me manage my daily wellness routine.</p><p class="survey-q__cat">Category: Utility</p></div></div>
+              <div class="survey-q"><div class="survey-q__num">Q5</div><div><p class="survey-q__text">I encountered no confusing elements during testing.</p><p class="survey-q__cat">Category: Error-Free Experience</p></div></div>
+              <div class="survey-q"><div class="survey-q__num">Q6</div><div><p class="survey-q__text">I would recommend this app to others.</p><p class="survey-q__cat">Category: Satisfaction</p></div></div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- ─── TAB: Documentation ─── -->
+        <div class="tabs__panel" data-tab="docs">
+
+          <div class="photo-grid">
+            <div class="photo-card"><div class="photo-placeholder">📸</div><h4>Testing Session 1</h4><p>Respondents R1 & R2</p></div>
+            <div class="photo-card"><div class="photo-placeholder">📸</div><h4>Testing Session 2</h4><p>Respondents R3 & R4</p></div>
+            <div class="photo-card"><div class="photo-placeholder">📸</div><h4>Testing Session 3</h4><p>Respondent R5</p></div>
+          </div>
+
+          <div class="card card--flat" style="margin-top:24px;">
+            <h4 style="margin-bottom:16px;">📁 Supporting Documents</h4>
+            <div class="doc-list">
+              <a href="#" class="doc-link"><span class="doc-link__icon">📄</span><div><p class="doc-link__name">Heuristic Evaluation Workbook.pdf</p><p class="doc-link__sub">All 5 members' completed workbooks</p></div><span class="doc-link__cta">Download →</span></a>
+              <a href="#" class="doc-link"><span class="doc-link__icon">📋</span><div><p class="doc-link__name">Usability Testing Survey Results.pdf</p><p class="doc-link__sub">Raw responses from 5 respondents</p></div><span class="doc-link__cta">Download →</span></a>
+              <a href="#" class="doc-link"><span class="doc-link__icon">🎨</span><div><p class="doc-link__name">Figma Prototype Link</p><p class="doc-link__sub">High-fidelity mockup – Group 4 HCI2</p></div><span class="doc-link__cta">Open →</span></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div><!-- end data-tabs -->
+
+    </div>
+  </main>
+
+
+  <!-- ═══════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__brand">🌿 Wellness <span>Super App</span></div>
+    <p class="footer__text">HCI2 Final Project · Group 4 · Partido State University, Goa, Camarines Sur<br>Jodelyn · Julius · Celes · Meljun · Mark · © 2026</p>
+  </footer>
+
+  <script src="js/shared.js"></script>
+</body>
+</html>
