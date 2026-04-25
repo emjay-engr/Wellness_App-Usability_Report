@@ -1,37 +1,41 @@
 /* ================================================
    shared.js
    Shared across ALL pages: navbar toggle, tabs
-   Every page loads this script
 ================================================ */
 
 class Navbar {
   constructor() {
-    this.toggle   = document.querySelector('.navbar__toggle');
-    this.links    = document.querySelector('.navbar__links');
+    this.toggle = document.querySelector('.navbar__toggle');
+    this.links = document.querySelector('.navbar__links');
     this.allLinks = document.querySelectorAll('.navbar__links a');
+
     this._init();
   }
 
   _init() {
-    if (this.toggle) {
-      this.toggle.addEventListener('click', () => this._toggleMenu());
+    // Mobile toggle
+    if (this.toggle && this.links) {
+      this.toggle.addEventListener('click', () => {
+        this.links.classList.toggle('nav--open');
+      });
     }
-    // Close menu when a link is clicked
+
+    // Close menu when clicking a link
     this.allLinks.forEach(link => {
       link.addEventListener('click', () => {
-        if (this.links) this.links.classList.remove('nav--open');
+        if (this.links) {
+          this.links.classList.remove('nav--open');
+        }
       });
     });
-    // Mark active link based on current page filename
+
     this._setActiveLink();
   }
 
-  _toggleMenu() {
-    this.links.classList.toggle('nav--open');
-  }
-
   _setActiveLink() {
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const currentPage =
+      window.location.pathname.split('/').pop() || 'index.html';
+
     this.allLinks.forEach(link => {
       const href = link.getAttribute('href');
       if (href === currentPage) {
@@ -42,33 +46,33 @@ class Navbar {
 }
 
 class Tabs {
-  constructor(containerSelector) {
-    this.containers = document.querySelectorAll(containerSelector);
+  constructor(selector) {
+    this.containers = document.querySelectorAll(selector);
     this._init();
   }
 
   _init() {
     this.containers.forEach(container => {
       const buttons = container.querySelectorAll('.tabs__btn');
+      const panels = container.querySelectorAll('.tabs__panel');
+
       buttons.forEach(btn => {
-        btn.addEventListener('click', () => this._switchTab(container, btn));
+        btn.addEventListener('click', () => {
+          const target = btn.dataset.tab;
+
+          // update buttons
+          buttons.forEach(b => b.classList.remove('tab--active'));
+          btn.classList.add('tab--active');
+
+          // update panels
+          panels.forEach(panel => {
+            panel.classList.toggle(
+              'tab--active',
+              panel.dataset.tab === target
+            );
+          });
+        });
       });
-    });
-  }
-
-  _switchTab(container, activeBtn) {
-    const targetId = activeBtn.dataset.tab;
-
-    // Update button states
-    container.querySelectorAll('.tabs__btn').forEach(b => b.classList.remove('tab--active'));
-    activeBtn.classList.add('tab--active');
-
-    // Update panel states
-    container.querySelectorAll('.tabs__panel').forEach(panel => {
-      panel.classList.remove('tab--active');
-      if (panel.dataset.tab === targetId) {
-        panel.classList.add('tab--active');
-      }
     });
   }
 }
@@ -83,7 +87,7 @@ class ScrollAnimator {
     if (!this.elements.length) return;
 
     const observer = new IntersectionObserver(
-      (entries) => {
+      entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('fade-up');
@@ -98,7 +102,7 @@ class ScrollAnimator {
   }
 }
 
-// ── Bootstrap on DOM ready ──
+/* ── INIT EVERYTHING ── */
 document.addEventListener('DOMContentLoaded', () => {
   new Navbar();
   new Tabs('.tabs');
