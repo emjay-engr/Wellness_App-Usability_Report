@@ -98,7 +98,7 @@ This project is deployed using **GitHub Pages**.
 | Meljun Polillo         |               |
 | John Clark Gonzaga     |               |
 | Julius Villaralbo      |               |
-
+| Jodelyn Millesca       |               |
 ---
 
 ## 📸 Documentation
