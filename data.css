@@ -398,3 +398,35 @@
   .consent-form__fields { grid-template-columns: 1fr; }
   .heuristic-item { flex-direction: column; }
 }
+
+.photo-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:24px;
+}
+
+.photo-card{
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+padding-bottom:15px;
+text-align:center;
+}
+
+.doc-photo{
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
+}
+
+.photo-card h4{
+margin:15px 0 8px;
+}
+
+.photo-card p{
+margin:0;
+padding-bottom:10px;
+color:#666;
+}
