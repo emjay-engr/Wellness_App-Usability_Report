@@ -135,13 +135,29 @@
 .member-eval-header p  { font-size: 12px; color: var(--text-sub); }
 
 /* ─── Consent form ───────────────────────────── */
-.consent-form {
-  max-width: 680px;
+.consent-grid {
+  display: block;
+}
+
+.consent-form,
+.sus-card {
+  width: 100%;
   background: var(--white);
   border-radius: var(--r-lg);
   border: 1px solid var(--border);
   padding: 40px;
   box-shadow: var(--shadow-sm);
+}
+
+.consent-form.scrollable-form {
+  max-height: 580px;
+  overflow: auto;
+  padding-right: 18px;
+}
+
+.sus-card {
+  padding: 32px;
+  margin-top: 24px;
 }
 
 .consent-form__header { text-align: center; margin-bottom: 28px; }
@@ -166,6 +182,10 @@
   gap: 16px;
 }
 
+.consent-form__fields--wide {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .consent-form__field {
   background: var(--bg);
   border-radius: var(--r-sm);
@@ -181,9 +201,110 @@
   margin-bottom: 12px;
 }
 
+.consent-form__footer {
+  margin-top: 18px;
+  font-size: 12px;
+  color: var(--text-sub);
+}
+
+.consent-form__footer p {
+  margin-bottom: 8px;
+}
+
+.consent-form__footer strong {
+  color: var(--text);
+}
+
 .consent-form__field-line {
   height: 36px;
   border-bottom: 1.5px solid var(--border);
+}
+
+.sus-card .consent-form__fields {
+  grid-template-columns: 1fr;
+}
+
+.sus-card .consent-form__field-line {
+  min-height: 110px;
+}
+
+.sus-table-wrap {
+  overflow-x: auto;
+  margin-bottom: 18px;
+}
+
+.sus-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+}
+
+.sus-table th,
+.sus-table td {
+  border: 1px solid var(--border);
+  padding: 12px;
+  vertical-align: middle;
+}
+
+.sus-table th {
+  background: var(--green-light);
+  color: var(--green-dark);
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.sus-table th:first-child,
+.sus-table td:first-child {
+  text-align: left;
+}
+
+.sus-question {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.sus-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  position: relative;
+}
+
+.sus-checkbox input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.sus-checkbox span {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  transition: all 0.18s ease;
+}
+
+.sus-checkbox input:checked + span {
+  background: var(--green);
+  border-color: var(--green);
+}
+
+.sus-open-ended h4 {
+  margin-top: 16px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.sus-open-ended p {
+  margin-bottom: 18px;
+  color: var(--text-sub);
 }
 
 /* ─── Survey list ────────────────────────────── */
