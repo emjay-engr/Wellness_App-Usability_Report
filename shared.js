@@ -108,3 +108,21 @@ document.addEventListener('DOMContentLoaded', () => {
   new Tabs('.tabs');
   new ScrollAnimator();
 });
+
+
+// Back to top button (safe version)
+const topBtn = document.getElementById("topBtn");
+
+if (topBtn) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  });
+
+  topBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}

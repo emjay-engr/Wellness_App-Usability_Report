@@ -223,3 +223,18 @@
   .closing-card { padding: 36px 20px; }
   .closing-card__text { font-size: 14px; }
 }
+
+#topBtn{
+position:fixed;
+bottom:20px;
+right:20px;
+padding:12px 16px;
+border:none;
+border-radius:50%;
+background:#22c55e;
+color:#fff;
+font-size:18px;
+cursor:pointer;
+display:none;
+box-shadow:0 4px 12px rgba(0,0,0,.2);
+}
