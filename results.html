@@ -9,270 +9,650 @@
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════
-       NAVBAR
-  ═══════════════════════════════════ -->
+  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
   <nav class="navbar">
     <a class="navbar__brand" href="index.html">
       <div class="navbar__brand-icon">🌿</div>
       Wellness Super App
     </a>
     <div class="navbar__links">
-      <a href="index.html"                           > Home</a>
-      <a href="data.html"                            > Data Gathering</a>
-      <a href="results.html"     class="nav--active" > Results</a>
-      <a href="reflections.html"                     > Reflections</a>
+      <a href="index.html">🏠 Home</a>
+      <a href="data.html">📋 Data Gathering</a>
+      <a href="results.html" class="nav--active">📊 Results</a>
+      <a href="reflections.html">💬 Reflections</a>
     </div>
     <button class="navbar__toggle" aria-label="Toggle menu">☰</button>
   </nav>
 
-
-  <!-- ═══════════════════════════════════
-       PAGE HERO BAR
-  ═══════════════════════════════════ -->
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
   <div class="page-hero-bar">
-    <span class="page-hero-bar__badge">📊 Results & Discussion</span>
-    <h1 class="page-hero-bar__title">Usability Evaluation Findings</h1>
-    <p class="page-hero-bar__sub">Summary of results, key issues, discussion of findings, and design improvement recommendations.</p>
+    <span class="page-hero-bar__badge">📊 Results &amp; Discussion</span>
+    <h1 class="page-hero-bar__title">SUS Usability Evaluation Results</h1>
+    <p class="page-hero-bar__sub">System Usability Scale evaluation with 40 respondents — computed scores, charts, and findings.</p>
   </div>
 
+  <main>
 
-  <!-- ═══════════════════════════════════
-       SUMMARY STATS
-  ═══════════════════════════════════ -->
-  <section class="section section--tight">
-    <div class="container">
-      <span class="sec-badge">📈 Summary</span>
-      <h2 class="sec-title">Evaluation at a Glance</h2>
-      <p class="sec-sub">Key metrics from heuristic evaluation and usability testing with 5 respondents.</p>
+    <!-- ═══════════════════════════ SUS SCORE HERO ═══════════════════════════ -->
+    <section class="section section--tight">
+      <div class="container">
+        <span class="sec-badge">🎯 SUS Score</span>
+        <h2 class="sec-title">Overall Usability Score</h2>
+        <p class="sec-sub">Computed from 40 respondents using the standard System Usability Scale formula: sum of contributions × 2.5.</p>
 
-      <div class="summary-stats">
-        <div class="summary-stat-card">
-          <div class="summary-stat-card__val">4.2</div>
-          <div class="summary-stat-card__label">Avg. Usability Score (/ 5.0)</div>
-        </div>
-        <div class="summary-stat-card">
-          <div class="summary-stat-card__val">84%</div>
-          <div class="summary-stat-card__label">Overall Satisfaction Rate</div>
-        </div>
-        <div class="summary-stat-card summary-stat-card--red">
-          <div class="summary-stat-card__val">2</div>
-          <div class="summary-stat-card__label">Critical Issues Found</div>
-        </div>
-        <div class="summary-stat-card summary-stat-card--yellow">
-          <div class="summary-stat-card__val">3</div>
-          <div class="summary-stat-card__label">Moderate Issues Found</div>
-        </div>
-        <div class="summary-stat-card">
-          <div class="summary-stat-card__val">5</div>
-          <div class="summary-stat-card__label">Recommendations Made</div>
+        <div class="sus-hero">
+          <div class="sus-score-ring">
+            <svg viewBox="0 0 200 200" class="sus-ring-svg">
+              <circle cx="100" cy="100" r="80" class="ring-bg"/>
+              <!-- 62.78 / 100 * circumference(502.65) = 315.56 offset from 502.65 = 187.09 -->
+              <circle cx="100" cy="100" r="80" class="ring-fill" style="stroke-dashoffset: 187;"/>
+            </svg>
+            <div class="sus-ring-center">
+              <div class="sus-ring-val">62.78</div>
+              <div class="sus-ring-label">SUS Score</div>
+            </div>
+          </div>
+
+          <div class="sus-meta">
+            <div class="sus-grade-card">
+              <div class="sus-grade-card__letter">D</div>
+              <div class="sus-grade-card__adj">Marginal / OK</div>
+              <div class="sus-grade-card__note">Above the minimum acceptable threshold of 51</div>
+            </div>
+            <div class="sus-scale-bar">
+              <div class="sus-scale-bar__title">SUS Benchmark Scale</div>
+              <div class="sus-scale-track">
+                <div class="sus-scale-segment ss-f">F<br><span>0–51</span></div>
+                <div class="sus-scale-segment ss-d">D<br><span>51–68</span></div>
+                <div class="sus-scale-segment ss-c">C<br><span>68–74</span></div>
+                <div class="sus-scale-segment ss-b">B<br><span>74–85</span></div>
+                <div class="sus-scale-segment ss-a">A<br><span>85–100</span></div>
+              </div>
+              <div class="sus-scale-pointer" style="left: 62.78%;">
+                <div class="sus-scale-pointer__line"></div>
+                <div class="sus-scale-pointer__label">62.78</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- ═══════════════════════════ SUMMARY STATS ═══════════════════════════ -->
+    <section class="section section--tight section--gray">
+      <div class="container">
+        <span class="sec-badge">📈 Summary</span>
+        <h2 class="sec-title">Evaluation at a Glance</h2>
 
-  <!-- ═══════════════════════════════════
-       BAR CHART RESULTS
-  ═══════════════════════════════════ -->
-  <section class="section section--tight section--gray">
-    <div class="container">
-      <span class="sec-badge">📊 Survey Results</span>
-      <h2 class="sec-title">Usability Scores per Category</h2>
-      <p class="sec-sub">Average scores from the 5-point Likert scale usability survey across 5 respondents.</p>
-
-      <div class="bar-chart-card">
-        <h4 class="bar-chart-card__title">Average Score per Category (out of 5.0)</h4>
-
-        <div class="bar-row">
-          <span class="bar-row__label">Navigation</span>
-          <div class="bar-row__track"><div class="bar-row__fill" style="width:90%;">4.5</div></div>
-        </div>
-        <div class="bar-row">
-          <span class="bar-row__label">Visual Design</span>
-          <div class="bar-row__track"><div class="bar-row__fill" style="width:88%;">4.4</div></div>
-        </div>
-        <div class="bar-row">
-          <span class="bar-row__label">Clarity</span>
-          <div class="bar-row__track"><div class="bar-row__fill" style="width:86%;">4.3</div></div>
-        </div>
-        <div class="bar-row">
-          <span class="bar-row__label">Utility</span>
-          <div class="bar-row__track"><div class="bar-row__fill" style="width:92%;">4.6</div></div>
-        </div>
-        <div class="bar-row">
-          <span class="bar-row__label">Error-Free</span>
-          <div class="bar-row__track"><div class="bar-row__fill bar-row__fill--yellow" style="width:68%;">3.4</div></div>
-        </div>
-        <div class="bar-row">
-          <span class="bar-row__label">Satisfaction</span>
-          <div class="bar-row__track"><div class="bar-row__fill" style="width:84%;">4.2</div></div>
+        <div class="summary-grid">
+          <div class="summary-card summary-card--green">
+            <div class="summary-card__icon">👥</div>
+            <div class="summary-card__val">40</div>
+            <div class="summary-card__label">Total Respondents</div>
+          </div>
+          <div class="summary-card summary-card--blue">
+            <div class="summary-card__icon">📋</div>
+            <div class="summary-card__val">10</div>
+            <div class="summary-card__label">SUS Questions</div>
+          </div>
+          <div class="summary-card summary-card--yellow">
+            <div class="summary-card__icon">⭐</div>
+            <div class="summary-card__val">62.78</div>
+            <div class="summary-card__label">SUS Score (/ 100)</div>
+          </div>
+          <div class="summary-card summary-card--purple">
+            <div class="summary-card__icon">📊</div>
+            <div class="summary-card__val">402</div>
+            <div class="summary-card__label">Total Responses</div>
+          </div>
+          <div class="summary-card summary-card--red">
+            <div class="summary-card__icon">🎯</div>
+            <div class="summary-card__val">68</div>
+            <div class="summary-card__label">Industry Baseline</div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- ═══════════════════════════ MAIN CHARTS ═══════════════════════════ -->
+    <section class="section section--tight">
+      <div class="container">
+        <span class="sec-badge">📊 Charts &amp; Analysis</span>
+        <h2 class="sec-title">Detailed Results Dashboard</h2>
 
-  <!-- ═══════════════════════════════════
-       KEY ISSUES
-  ═══════════════════════════════════ -->
-  <section class="section section--tight">
-    <div class="container">
-      <span class="sec-badge">🔴 Issues Identified</span>
-      <h2 class="sec-title">Key Usability Problems</h2>
-      <p class="sec-sub">Issues ranked by severity based on heuristic evaluation findings from all 5 group members.</p>
+        <div class="charts-grid">
 
-      <div class="issues-list">
-
-        <div class="issue-item issue-item--high">
-          <div class="issue-item__indicator">🔴</div>
-          <div class="issue-item__body">
-            <span class="badge badge--red">Critical · H9</span>
-            <h4 class="issue-item__title">No Error Validation Messages</h4>
-            <p class="issue-item__desc">All 5 evaluators noted that submitting forms with empty required fields gives no feedback. Users cannot tell if an action worked or failed — identified as the most critical issue overall.</p>
+          <!-- Chart 1: Response Distribution Donut -->
+          <div class="chart-card">
+            <h4 class="chart-card__title">Overall Response Distribution</h4>
+            <p class="chart-card__sub">All 402 responses across 10 questions</p>
+            <div class="donut-wrap">
+              <svg viewBox="0 0 200 200" class="donut-svg">
+                <!-- Total = 402 | circumference = 2π×70 = 439.82 -->
+                <!-- SD=25(6.2%) D=68(16.9%) N=89(22.1%) A=145(36.1%) SA=75(18.7%) -->
+                <!-- offsets accumulate: each segment offset = prev_end -->
+                <!-- SD: dash=27.3, offset=0 -->
+                <circle cx="100" cy="100" r="70" class="donut-bg"/>
+                <circle cx="100" cy="100" r="70" class="donut-seg seg-sd"
+                  stroke-dasharray="27.3 412.5" stroke-dashoffset="109.9"/>
+                <!-- D: dash=74.3, offset = 439.82 - 27.3 = 412.5 → offset=-27.3+109.9=82.6 -->
+                <circle cx="100" cy="100" r="70" class="donut-seg seg-d"
+                  stroke-dasharray="74.3 365.5" stroke-dashoffset="82.6"/>
+                <!-- N: dash=97.1 -->
+                <circle cx="100" cy="100" r="70" class="donut-seg seg-n"
+                  stroke-dasharray="97.1 342.7" stroke-dashoffset="8.3"/>
+                <!-- A: dash=158.8 -->
+                <circle cx="100" cy="100" r="70" class="donut-seg seg-a"
+                  stroke-dasharray="158.8 281.0" stroke-dashoffset="-88.8"/>
+                <!-- SA: dash=82.0 -->
+                <circle cx="100" cy="100" r="70" class="donut-seg seg-sa"
+                  stroke-dasharray="82.0 357.8" stroke-dashoffset="-247.6"/>
+                <text x="100" y="94" class="donut-center-val">402</text>
+                <text x="100" y="112" class="donut-center-lbl">responses</text>
+              </svg>
+              <div class="donut-legend">
+                <div class="dl-item"><span class="dl-dot" style="background:#D04040;"></span><span>Strongly Disagree</span><strong>25 (6.2%)</strong></div>
+                <div class="dl-item"><span class="dl-dot" style="background:#F4A842;"></span><span>Disagree</span><strong>68 (16.9%)</strong></div>
+                <div class="dl-item"><span class="dl-dot" style="background:#9aaa9a;"></span><span>Neutral</span><strong>89 (22.1%)</strong></div>
+                <div class="dl-item"><span class="dl-dot" style="background:#A8D5BB;"></span><span>Agree</span><strong>145 (36.1%)</strong></div>
+                <div class="dl-item"><span class="dl-dot" style="background:#5BA584;"></span><span>Strongly Agree</span><strong>75 (18.7%)</strong></div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="issue-item issue-item--high">
-          <div class="issue-item__indicator">🔴</div>
-          <div class="issue-item__body">
-            <span class="badge badge--red">Critical · H10</span>
-            <h4 class="issue-item__title">No Onboarding or Help Documentation</h4>
-            <p class="issue-item__desc">First-time users do not understand the Intensity Slider or streak dot color system. No tutorial, tooltip, or help screen exists to guide new users through the app's features.</p>
+          <!-- Chart 2: Positive vs Negative Questions -->
+          <div class="chart-card">
+            <h4 class="chart-card__title">Positive vs. Negative Questions</h4>
+            <p class="chart-card__sub">Average SUS contribution score per question type</p>
+            <div class="compare-chart">
+              <div class="compare-item">
+                <div class="compare-label">
+                  <span class="compare-type pos">Positive (Q1,3,5,7,9)</span>
+                  <strong>2.95 avg</strong>
+                </div>
+                <div class="compare-track">
+                  <div class="compare-fill compare-fill--green" style="width:73.75%;"></div>
+                </div>
+                <div class="compare-note">Higher = better usability ✅</div>
+              </div>
+              <div class="compare-item" style="margin-top:28px;">
+                <div class="compare-label">
+                  <span class="compare-type neg">Negative (Q2,4,6,8,10)</span>
+                  <strong>2.07 avg</strong>
+                </div>
+                <div class="compare-track">
+                  <div class="compare-fill compare-fill--yellow" style="width:51.75%;"></div>
+                </div>
+                <div class="compare-note">Lower contribution = more problems ⚠️</div>
+              </div>
+              <div class="compare-insight">
+                <div class="compare-insight__icon">💡</div>
+                <p>Negative questions scored lower, meaning respondents <strong>agreed</strong> with complexity and difficulty statements — the app's primary weakness areas.</p>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="issue-item issue-item--medium">
-          <div class="issue-item__indicator">🟡</div>
-          <div class="issue-item__body">
-            <span class="badge badge--yellow">Moderate · H3</span>
-            <h4 class="issue-item__title">No Undo for Deleted Items</h4>
-            <p class="issue-item__desc">When a task or habit is deleted, there is no confirmation dialog or undo option. This was reported by 3 out of 5 respondents as a concern during usability testing.</p>
+        </div><!-- end charts-grid -->
+
+        <!-- Chart 3: Per-Question Bar Chart (full width) -->
+        <div class="chart-card" style="margin-top:20px;">
+          <h4 class="chart-card__title">SUS Contribution per Question</h4>
+          <p class="chart-card__sub">Max possible contribution per question = 4.0 (perfect score)</p>
+          <div class="q-bar-chart">
+
+            <div class="q-bar-row">
+              <div class="q-bar-label"><span class="q-tag q-pos">Q1</span>Use frequently</div>
+              <div class="q-bar-track"><div class="q-bar-fill q-bar-fill--green" style="width:74.5%;"><span>2.98</span></div></div>
+            </div>
+            <div class="q-bar-row">
+              <div class="q-bar-label"><span class="q-tag q-neg">Q2</span>Unnecessarily complex</div>
+              <div class="q-bar-track"><div class="q-bar-fill q-bar-fill--yellow" style="width:45.75%;"><span>1.83</span></div></div>
+            </div>
+            <div class="q-bar-row">
+              <div class="q-bar-label"><span class="q-tag q-pos">Q3</span>Easy to use</div>
+              <div class="q-bar-track"><div class="q-bar-fill q-bar-fill--green" style="width:80%;"><span>3.20</span></div></div>
+            </div>
+            <div class="q-bar-row">
+              <div class="q-bar-label"><span class="q-tag q-neg">Q4</span>Needs technical support</div>
+              <div class="q-bar-track"><div class="q-bar-fill q-bar-fill--yellow" style="width:50.5%;"><span>2.02</span></div></div>
+            </div>
+            <div class="q-bar-row">
+              <div class="q-bar-label"><span class="q-tag q-pos">Q5</span>Well integrated</div>
+              <div class="q-bar-track"><div class="q-bar-fill q-bar-fill--green" style="width:73%;"><span>2.92</span></div></div>
+            </div>
+            <div class="q-bar-row">
+              <div class="q-bar-label"><span class="q-tag q-neg">Q6</span>Too inconsistent</div>
+              <div class="q-bar-track"><div class="q-bar-fill q-bar-fill--orange" style="width:58.25%;"><span>2.33</span></div></div>
+            </div>
+            <div class="q-bar-row">
+              <div class="q-bar-label"><span class="q-tag q-pos">Q7</span>Easy to learn</div>
+              <div class="q-bar-track"><div class="q-bar-fill q-bar-fill--green" style="width:70%;"><span>2.80</span></div></div>
+            </div>
+            <div class="q-bar-row">
+              <div class="q-bar-label"><span class="q-tag q-neg">Q8</span>Cumbersome to use</div>
+              <div class="q-bar-track"><div class="q-bar-fill q-bar-fill--orange" style="width:61.25%;"><span>2.45</span></div></div>
+            </div>
+            <div class="q-bar-row">
+              <div class="q-bar-label"><span class="q-tag q-pos">Q9</span>Felt confident</div>
+              <div class="q-bar-track"><div class="q-bar-fill q-bar-fill--green" style="width:71.25%;"><span>2.85</span></div></div>
+            </div>
+            <div class="q-bar-row">
+              <div class="q-bar-label"><span class="q-tag q-neg">Q10</span>Needed to learn first</div>
+              <div class="q-bar-track"><div class="q-bar-fill q-bar-fill--yellow" style="width:43.25%;"><span>1.73</span></div></div>
+            </div>
+
           </div>
-        </div>
-
-        <div class="issue-item issue-item--medium">
-          <div class="issue-item__indicator">🟡</div>
-          <div class="issue-item__body">
-            <span class="badge badge--yellow">Moderate · H9</span>
-            <h4 class="issue-item__title">Missing Empty State Screens</h4>
-            <p class="issue-item__desc">Analytics and past entries show blank space when no data is available. There is no helpful "No data yet" message or call-to-action to guide users forward.</p>
+          <div class="q-bar-legend">
+            <span><span class="q-tag q-pos" style="font-size:10px;">POS</span> Positive question — higher is better</span>
+            <span><span class="q-tag q-neg" style="font-size:10px;">NEG</span> Negative question — higher means more problems</span>
           </div>
-        </div>
-
-        <div class="issue-item issue-item--low">
-          <div class="issue-item__indicator">🟢</div>
-          <div class="issue-item__body">
-            <span class="badge badge--green">Minor · H7</span>
-            <h4 class="issue-item__title">No Swipe Gestures for Power Users</h4>
-            <p class="issue-item__desc">Frequent users cannot swipe to mark habits done or dismiss tasks. Only tap-based interactions are available, which reduces efficiency for experienced users.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════
-       DISCUSSION
-  ═══════════════════════════════════ -->
-  <section class="section section--tight section--gray">
-    <div class="container">
-      <span class="sec-badge">💬 Discussion</span>
-      <h2 class="sec-title">Discussion of Findings</h2>
-      <p class="sec-sub">Interpretation and analysis of the usability evaluation results.</p>
-
-      <div class="discussion-blocks">
-
-        <div class="discussion-block discussion-block--positive">
-          <div class="discussion-block__icon">✅</div>
-          <div class="discussion-block__body">
-            <h4>Strong Overall Performance</h4>
-            <p>The Wellness Super App received positive usability scores across navigation, visual design, clarity, and utility — averaging <strong>4.2 out of 5.0</strong>. Respondents found the app visually appealing and easy to understand thanks to consistent green color system, emoji-paired labels, and clean card-based layouts.</p>
-          </div>
-        </div>
-
-        <div class="discussion-block discussion-block--negative">
-          <div class="discussion-block__icon">⚠️</div>
-          <div class="discussion-block__body">
-            <h4>Lowest Score: Error-Free Experience</h4>
-            <p>The <strong>lowest score (3.4/5.0)</strong> was recorded for the "Error-Free Experience" category. This aligns with the two critical heuristic violations — absence of form validation (H9) and lack of onboarding help (H10). These are the highest-priority improvements for the next prototype iteration.</p>
-          </div>
-        </div>
-
-        <div class="discussion-block discussion-block--positive">
-          <div class="discussion-block__icon">💚</div>
-          <div class="discussion-block__body">
-            <h4>High User Recommendation Rate</h4>
-            <p>Despite the gaps found, <strong>84% of respondents</strong> said they would recommend the app to others, and all 5 agreed it would genuinely help manage their wellness routine. This confirms the core concept and design direction are solid — improvements are refinements, not redesigns.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ═══════════════════════════════════
-       RECOMMENDATIONS
-  ═══════════════════════════════════ -->
-  <section class="section section--tight">
-    <div class="container">
-      <span class="sec-badge">✅ Recommendations</span>
-      <h2 class="sec-title">Design Improvement Recommendations</h2>
-      <p class="sec-sub">Actionable fixes for each identified usability issue, prioritized by severity.</p>
-
-      <div class="rec-grid">
-
-        <div class="rec-card">
-          <div class="rec-card__icon">🛡️</div>
-          <span class="badge badge--red" style="margin-bottom:10px;display:inline-block;">Critical Fix</span>
-          <h4 class="rec-card__title">Add Form Validation Messages</h4>
-          <p class="rec-card__text">Show inline error messages when required fields are empty. Use red border highlight with helper text: <em>"Please select your mood first before saving."</em></p>
-        </div>
-
-        <div class="rec-card">
-          <div class="rec-card__icon">📖</div>
-          <span class="badge badge--red" style="margin-bottom:10px;display:inline-block;">Critical Fix</span>
-          <h4 class="rec-card__title">Add Onboarding Tutorial</h4>
-          <p class="rec-card__text">Create a 3-step onboarding carousel on first launch that explains the Mood Tracker intensity slider, streak dot colors, and how to create a habit.</p>
-        </div>
-
-        <div class="rec-card">
-          <div class="rec-card__icon">↩️</div>
-          <span class="badge badge--yellow" style="margin-bottom:10px;display:inline-block;">Moderate Fix</span>
-          <h4 class="rec-card__title">Add Undo / Confirm Delete</h4>
-          <p class="rec-card__text">Show a confirmation bottom sheet before deleting a habit or task. Add a 3-second "Undo" toast notification after deletion for user safety.</p>
-        </div>
-
-        <div class="rec-card">
-          <div class="rec-card__icon">📭</div>
-          <span class="badge badge--yellow" style="margin-bottom:10px;display:inline-block;">Moderate Fix</span>
-          <h4 class="rec-card__title">Design Empty State Screens</h4>
-          <p class="rec-card__text">Replace blank analytics charts and entry lists with illustrated empty state screens that show a friendly message and encourage users to start logging data.</p>
-        </div>
-
-        <div class="rec-card">
-          <div class="rec-card__icon">👆</div>
-          <span class="badge badge--green" style="margin-bottom:10px;display:inline-block;">Minor Enhancement</span>
-          <h4 class="rec-card__title">Add Swipe Gestures</h4>
-          <p class="rec-card__text">Allow users to swipe right to mark a habit done and swipe left to delete or reschedule a task — following common mobile UX conventions for efficiency.</p>
         </div>
 
       </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- ═══════════════════════════ RESPONDENT TABLE ═══════════════════════════ -->
+    <section class="section section--tight section--gray">
+      <div class="container">
+        <span class="sec-badge">📋 Raw Data</span>
+        <h2 class="sec-title">Response Frequency Table</h2>
+        <p class="sec-sub">Full breakdown of all 40 respondents' answers per question across the 5-point Likert scale.</p>
 
-  <!-- ═══════════════════════════════════
-       FOOTER
-  ═══════════════════════════════════ -->
+        <div class="card card--flat">
+          <div class="table-wrap">
+            <table class="table sus-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Question</th>
+                  <th>Type</th>
+                  <th>SD (1)</th>
+                  <th>D (2)</th>
+                  <th>N (3)</th>
+                  <th>A (4)</th>
+                  <th>SA (5)</th>
+                  <th>Mean</th>
+                  <th>Contribution</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="row-pos">
+                  <td><strong>Q1</strong></td>
+                  <td>I think that I would use this system frequently</td>
+                  <td><span class="q-tag q-pos">POS</span></td>
+                  <td>1</td><td>0</td><td>7</td><td>23</td><td>9</td>
+                  <td><strong>3.98</strong></td>
+                  <td><span class="contrib-badge cb-good">2.98</span></td>
+                </tr>
+                <tr class="row-neg">
+                  <td><strong>Q2</strong></td>
+                  <td>I found the system unnecessarily complex</td>
+                  <td><span class="q-tag q-neg">NEG</span></td>
+                  <td>3</td><td>10</td><td>12</td><td>7</td><td>8</td>
+                  <td><strong>3.17</strong></td>
+                  <td><span class="contrib-badge cb-warn">1.83</span></td>
+                </tr>
+                <tr class="row-pos">
+                  <td><strong>Q3</strong></td>
+                  <td>I thought the system was easy to use</td>
+                  <td><span class="q-tag q-pos">POS</span></td>
+                  <td>1</td><td>0</td><td>4</td><td>20</td><td>15</td>
+                  <td><strong>4.20</strong></td>
+                  <td><span class="contrib-badge cb-best">3.20</span></td>
+                </tr>
+                <tr class="row-neg">
+                  <td><strong>Q4</strong></td>
+                  <td>I think I would need technical support to use this system</td>
+                  <td><span class="q-tag q-neg">NEG</span></td>
+                  <td>5</td><td>11</td><td>10</td><td>8</td><td>6</td>
+                  <td><strong>2.98</strong></td>
+                  <td><span class="contrib-badge cb-warn">2.02</span></td>
+                </tr>
+                <tr class="row-pos">
+                  <td><strong>Q5</strong></td>
+                  <td>I found the various functions were well integrated</td>
+                  <td><span class="q-tag q-pos">POS</span></td>
+                  <td>1</td><td>0</td><td>10</td><td>19</td><td>10</td>
+                  <td><strong>3.92</strong></td>
+                  <td><span class="contrib-badge cb-good">2.92</span></td>
+                </tr>
+                <tr class="row-neg">
+                  <td><strong>Q6</strong></td>
+                  <td>I thought there was too much inconsistency in this system</td>
+                  <td><span class="q-tag q-neg">NEG</span></td>
+                  <td>4</td><td>18</td><td>8</td><td>7</td><td>3</td>
+                  <td><strong>2.67</strong></td>
+                  <td><span class="contrib-badge cb-good">2.33</span></td>
+                </tr>
+                <tr class="row-pos">
+                  <td><strong>Q7</strong></td>
+                  <td>Most people would learn to use this system very quickly</td>
+                  <td><span class="q-tag q-pos">POS</span></td>
+                  <td>1</td><td>4</td><td>6</td><td>20</td><td>9</td>
+                  <td><strong>3.80</strong></td>
+                  <td><span class="contrib-badge cb-good">2.80</span></td>
+                </tr>
+                <tr class="row-neg">
+                  <td><strong>Q8</strong></td>
+                  <td>I found the system very cumbersome to use</td>
+                  <td><span class="q-tag q-neg">NEG</span></td>
+                  <td>6</td><td>14</td><td>13</td><td>6</td><td>1</td>
+                  <td><strong>2.55</strong></td>
+                  <td><span class="contrib-badge cb-good">2.45</span></td>
+                </tr>
+                <tr class="row-pos">
+                  <td><strong>Q9</strong></td>
+                  <td>I felt very confident using this system</td>
+                  <td><span class="q-tag q-pos">POS</span></td>
+                  <td>1</td><td>1</td><td>9</td><td>22</td><td>8</td>
+                  <td><strong>3.85</strong></td>
+                  <td><span class="contrib-badge cb-good">2.85</span></td>
+                </tr>
+                <tr class="row-neg">
+                  <td><strong>Q10</strong></td>
+                  <td>I needed to learn a lot before I could get going</td>
+                  <td><span class="q-tag q-neg">NEG</span></td>
+                  <td>2</td><td>10</td><td>10</td><td>13</td><td>6</td>
+                  <td><strong>3.27</strong></td>
+                  <td><span class="contrib-badge cb-low">1.73</span></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr class="table-total">
+                  <td colspan="3"><strong>TOTAL</strong></td>
+                  <td><strong>25</strong></td>
+                  <td><strong>68</strong></td>
+                  <td><strong>89</strong></td>
+                  <td><strong>145</strong></td>
+                  <td><strong>75</strong></td>
+                  <td><strong>—</strong></td>
+                  <td><span class="sus-total-badge">SUS = 62.78</span></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+
+        <!-- SUS Formula Box -->
+        <div class="formula-box">
+          <h4 class="formula-box__title">📐 SUS Formula Applied</h4>
+          <div class="formula-steps">
+            <div class="formula-step">
+              <div class="formula-step__num">1</div>
+              <div><strong>Positive questions (Q1,3,5,7,9):</strong> Contribution = Scale position − 1<br><span class="formula-ex">e.g. Q3 mean 4.20 → 4.20 − 1 = 3.20</span></div>
+            </div>
+            <div class="formula-step">
+              <div class="formula-step__num">2</div>
+              <div><strong>Negative questions (Q2,4,6,8,10):</strong> Contribution = 5 − Scale position<br><span class="formula-ex">e.g. Q8 mean 2.55 → 5 − 2.55 = 2.45</span></div>
+            </div>
+            <div class="formula-step">
+              <div class="formula-step__num">3</div>
+              <div><strong>Sum all contributions:</strong> 2.98+1.83+3.20+2.02+2.92+2.33+2.80+2.45+2.85+1.73 = <strong>25.11</strong></div>
+            </div>
+            <div class="formula-step">
+              <div class="formula-step__num">4</div>
+              <div><strong>Multiply by 2.5:</strong> 25.11 × 2.5 = <strong class="formula-result">62.78</strong></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ STACKED BAR CHART ═══════════════════════════ -->
+    <section class="section section--tight">
+      <div class="container">
+        <span class="sec-badge">📊 Response Breakdown</span>
+        <h2 class="sec-title">Likert Scale Breakdown per Question</h2>
+        <p class="sec-sub">Percentage of respondents per answer choice for each of the 10 SUS questions.</p>
+
+        <div class="chart-card">
+          <div class="stacked-chart">
+
+            <div class="sc-row">
+              <div class="sc-label">Q1</div>
+              <div class="sc-bars">
+                <div class="sc-seg sc-sd" style="width:2.5%"  title="SD: 2.5%"></div>
+                <div class="sc-seg sc-d"  style="width:0%"    title="D: 0%"></div>
+                <div class="sc-seg sc-n"  style="width:17.5%" title="N: 17.5%"></div>
+                <div class="sc-seg sc-a"  style="width:57.5%" title="A: 57.5%"></div>
+                <div class="sc-seg sc-sa" style="width:22.5%" title="SA: 22.5%"></div>
+              </div>
+              <div class="sc-pct">80% A+SA</div>
+            </div>
+
+            <div class="sc-row">
+              <div class="sc-label">Q2</div>
+              <div class="sc-bars">
+                <div class="sc-seg sc-sd" style="width:7.5%"  title="SD: 7.5%"></div>
+                <div class="sc-seg sc-d"  style="width:25%"   title="D: 25%"></div>
+                <div class="sc-seg sc-n"  style="width:30%"   title="N: 30%"></div>
+                <div class="sc-seg sc-a"  style="width:17.5%" title="A: 17.5%"></div>
+                <div class="sc-seg sc-sa" style="width:20%"   title="SA: 20%"></div>
+              </div>
+              <div class="sc-pct">32.5% SD+D ✅</div>
+            </div>
+
+            <div class="sc-row">
+              <div class="sc-label">Q3</div>
+              <div class="sc-bars">
+                <div class="sc-seg sc-sd" style="width:2.5%"  title="SD: 2.5%"></div>
+                <div class="sc-seg sc-d"  style="width:0%"    title="D: 0%"></div>
+                <div class="sc-seg sc-n"  style="width:10%"   title="N: 10%"></div>
+                <div class="sc-seg sc-a"  style="width:50%"   title="A: 50%"></div>
+                <div class="sc-seg sc-sa" style="width:37.5%" title="SA: 37.5%"></div>
+              </div>
+              <div class="sc-pct">87.5% A+SA ⭐</div>
+            </div>
+
+            <div class="sc-row">
+              <div class="sc-label">Q4</div>
+              <div class="sc-bars">
+                <div class="sc-seg sc-sd" style="width:12.5%" title="SD: 12.5%"></div>
+                <div class="sc-seg sc-d"  style="width:27.5%" title="D: 27.5%"></div>
+                <div class="sc-seg sc-n"  style="width:25%"   title="N: 25%"></div>
+                <div class="sc-seg sc-a"  style="width:20%"   title="A: 20%"></div>
+                <div class="sc-seg sc-sa" style="width:15%"   title="SA: 15%"></div>
+              </div>
+              <div class="sc-pct">40% SD+D ✅</div>
+            </div>
+
+            <div class="sc-row">
+              <div class="sc-label">Q5</div>
+              <div class="sc-bars">
+                <div class="sc-seg sc-sd" style="width:2.5%"  title="SD: 2.5%"></div>
+                <div class="sc-seg sc-d"  style="width:0%"    title="D: 0%"></div>
+                <div class="sc-seg sc-n"  style="width:25%"   title="N: 25%"></div>
+                <div class="sc-seg sc-a"  style="width:47.5%" title="A: 47.5%"></div>
+                <div class="sc-seg sc-sa" style="width:25%"   title="SA: 25%"></div>
+              </div>
+              <div class="sc-pct">72.5% A+SA</div>
+            </div>
+
+            <div class="sc-row">
+              <div class="sc-label">Q6</div>
+              <div class="sc-bars">
+                <div class="sc-seg sc-sd" style="width:10%"   title="SD: 10%"></div>
+                <div class="sc-seg sc-d"  style="width:45%"   title="D: 45%"></div>
+                <div class="sc-seg sc-n"  style="width:20%"   title="N: 20%"></div>
+                <div class="sc-seg sc-a"  style="width:17.5%" title="A: 17.5%"></div>
+                <div class="sc-seg sc-sa" style="width:7.5%"  title="SA: 7.5%"></div>
+              </div>
+              <div class="sc-pct">55% SD+D ✅</div>
+            </div>
+
+            <div class="sc-row">
+              <div class="sc-label">Q7</div>
+              <div class="sc-bars">
+                <div class="sc-seg sc-sd" style="width:2.5%"  title="SD: 2.5%"></div>
+                <div class="sc-seg sc-d"  style="width:10%"   title="D: 10%"></div>
+                <div class="sc-seg sc-n"  style="width:15%"   title="N: 15%"></div>
+                <div class="sc-seg sc-a"  style="width:50%"   title="A: 50%"></div>
+                <div class="sc-seg sc-sa" style="width:22.5%" title="SA: 22.5%"></div>
+              </div>
+              <div class="sc-pct">72.5% A+SA</div>
+            </div>
+
+            <div class="sc-row">
+              <div class="sc-label">Q8</div>
+              <div class="sc-bars">
+                <div class="sc-seg sc-sd" style="width:15%"   title="SD: 15%"></div>
+                <div class="sc-seg sc-d"  style="width:35%"   title="D: 35%"></div>
+                <div class="sc-seg sc-n"  style="width:32.5%" title="N: 32.5%"></div>
+                <div class="sc-seg sc-a"  style="width:15%"   title="A: 15%"></div>
+                <div class="sc-seg sc-sa" style="width:2.5%"  title="SA: 2.5%"></div>
+              </div>
+              <div class="sc-pct">50% SD+D ✅</div>
+            </div>
+
+            <div class="sc-row">
+              <div class="sc-label">Q9</div>
+              <div class="sc-bars">
+                <div class="sc-seg sc-sd" style="width:2.5%"  title="SD: 2.5%"></div>
+                <div class="sc-seg sc-d"  style="width:2.5%"  title="D: 2.5%"></div>
+                <div class="sc-seg sc-n"  style="width:22.5%" title="N: 22.5%"></div>
+                <div class="sc-seg sc-a"  style="width:55%"   title="A: 55%"></div>
+                <div class="sc-seg sc-sa" style="width:20%"   title="SA: 20%"></div>
+              </div>
+              <div class="sc-pct">75% A+SA</div>
+            </div>
+
+            <div class="sc-row">
+              <div class="sc-label">Q10</div>
+              <div class="sc-bars">
+                <div class="sc-seg sc-sd" style="width:5%"    title="SD: 5%"></div>
+                <div class="sc-seg sc-d"  style="width:25%"   title="D: 25%"></div>
+                <div class="sc-seg sc-n"  style="width:25%"   title="N: 25%"></div>
+                <div class="sc-seg sc-a"  style="width:32.5%" title="A: 32.5%"></div>
+                <div class="sc-seg sc-sa" style="width:15%"   title="SA: 15%"></div>
+              </div>
+              <div class="sc-pct">47.5% A+SA ⚠️</div>
+            </div>
+
+          </div>
+
+          <div class="sc-legend">
+            <span><span class="sc-dot" style="background:#D04040;"></span>Strongly Disagree</span>
+            <span><span class="sc-dot" style="background:#F4A842;"></span>Disagree</span>
+            <span><span class="sc-dot" style="background:#9aaa9a;"></span>Neutral</span>
+            <span><span class="sc-dot" style="background:#A8D5BB;"></span>Agree</span>
+            <span><span class="sc-dot" style="background:#5BA584;"></span>Strongly Agree</span>
+          </div>
+          <p class="sc-note">✅ = For negative questions, SD+D is desirable. ⭐ = Top positive score. ⚠️ = Concern area.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ KEY FINDINGS ═══════════════════════════ -->
+    <section class="section section--tight section--gray">
+      <div class="container">
+        <span class="sec-badge">🔍 Findings</span>
+        <h2 class="sec-title">Key Findings &amp; Discussion</h2>
+
+        <div class="findings-grid">
+
+          <div class="finding-card finding-card--green">
+            <div class="finding-card__icon">⭐</div>
+            <h4>Strongest Area: Q3 – Ease of Use</h4>
+            <p>Q3 ("I thought the system was easy to use") had the highest SUS contribution of <strong>3.20 / 4.00</strong>. 87.5% of respondents agreed or strongly agreed — the clearest strength of the Wellness Super App.</p>
+          </div>
+
+          <div class="finding-card finding-card--green">
+            <div class="finding-card__icon">💪</div>
+            <h4>Strong Area: Confidence &amp; Frequency</h4>
+            <p>Q1 (use frequently, 2.98) and Q9 (felt confident, 2.85) both scored well. Most respondents see themselves using the app regularly and feel comfortable navigating it.</p>
+          </div>
+
+          <div class="finding-card finding-card--yellow">
+            <div class="finding-card__icon">⚠️</div>
+            <h4>Weak Area: Q10 – Learning Curve</h4>
+            <p>Q10 ("needed to learn a lot before getting going") had the <strong>lowest contribution at 1.73 / 4.00</strong>. 47.5% of respondents agreed they needed prior learning — pointing to the missing onboarding flow.</p>
+          </div>
+
+          <div class="finding-card finding-card--yellow">
+            <div class="finding-card__icon">🔧</div>
+            <h4>Weak Area: Q2 – Perceived Complexity</h4>
+            <p>Q2 ("unnecessarily complex") scored 1.83. 37.5% of respondents agreed with complexity statements — aligned with the heuristic finding that H9 (error recovery) and H10 (help/docs) are missing.</p>
+          </div>
+
+          <div class="finding-card finding-card--blue">
+            <div class="finding-card__icon">📊</div>
+            <h4>SUS Score Interpretation</h4>
+            <p>A score of <strong>62.78</strong> falls in the <strong>"Marginal / OK"</strong> range on the SUS adjective scale — above the failing threshold of 51, below the acceptable 68 industry baseline. The app is functional but needs improvements before full deployment.</p>
+          </div>
+
+          <div class="finding-card finding-card--blue">
+            <div class="finding-card__icon">🎯</div>
+            <h4>Gap from Industry Baseline</h4>
+            <p>The industry average SUS score is <strong>68</strong>. The app scores <strong>5.22 points below baseline</strong>. Addressing the learning curve (Q10) and complexity (Q2) issues would be the fastest path to reaching and exceeding 68.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ RECOMMENDATIONS ═══════════════════════════ -->
+    <section class="section section--tight">
+      <div class="container">
+        <span class="sec-badge">✅ Recommendations</span>
+        <h2 class="sec-title">Design Improvement Recommendations</h2>
+        <p class="sec-sub">Prioritized based on SUS question scores — highest impact items first.</p>
+
+        <div class="rec-grid">
+
+          <div class="rec-card">
+            <div class="rec-card__priority badge badge--red">Priority 1</div>
+            <div class="rec-card__icon">📖</div>
+            <h4 class="rec-card__title">Add Onboarding Tutorial</h4>
+            <p class="rec-card__text">Q10 scored lowest (1.73). A 3-step onboarding flow on first launch will reduce the learning curve and directly improve the SUS score on this question.</p>
+            <div class="rec-card__impact">+Q10 impact</div>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-card__priority badge badge--red">Priority 2</div>
+            <div class="rec-card__icon">🛡️</div>
+            <h4 class="rec-card__title">Add Form Validation</h4>
+            <p class="rec-card__text">Q2 complexity score (1.83) can be improved with clear error messages and inline validation — reducing the perception of complexity when things go wrong.</p>
+            <div class="rec-card__impact">+Q2 impact</div>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-card__priority badge badge--yellow">Priority 3</div>
+            <div class="rec-card__icon">↩️</div>
+            <h4 class="rec-card__title">Undo / Confirm Delete</h4>
+            <p class="rec-card__text">Q4 (technical support needed, 2.02) can improve if users feel safer interacting — an undo toast removes fear of mistakes without needing help from others.</p>
+            <div class="rec-card__impact">+Q4 impact</div>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-card__priority badge badge--yellow">Priority 4</div>
+            <div class="rec-card__icon">📭</div>
+            <h4 class="rec-card__title">Design Empty States</h4>
+            <p class="rec-card__text">Blank screens when no data exists confuse users (contributes to Q10 learning curve). Clear empty state messages with CTAs guide users naturally forward.</p>
+            <div class="rec-card__impact">+Q7, Q10 impact</div>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-card__priority badge badge--green">Priority 5</div>
+            <div class="rec-card__icon">👆</div>
+            <h4 class="rec-card__title">Add Swipe Gestures</h4>
+            <p class="rec-card__text">Adding common swipe interactions (mark done, dismiss) improves Q8 (cumbersome, 2.45) and Q7 (easy to learn, 2.80) — familiar gestures reduce friction.</p>
+            <div class="rec-card__impact">+Q7, Q8 impact</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
   <footer class="footer">
     <div class="footer__brand">🌿 Wellness <span>Super App</span></div>
     <p class="footer__text">HCI2 Final Project · Group 4 · Partido State University, Goa, Camarines Sur<br>Jodelyn · Julius · Celes · Meljun · Mark · © 2026</p>
   </footer>
-<button id="topBtn">↑</button>
-  <script src="shared.js"></script>
+
+  <script src="js/shared.js"></script>
 </body>
 </html>
