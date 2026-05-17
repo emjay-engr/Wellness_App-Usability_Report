@@ -1,41 +1,37 @@
 /* ================================================
    shared.js
    Shared across ALL pages: navbar toggle, tabs
+   Supports nested tab groups independently
 ================================================ */
 
 class Navbar {
   constructor() {
-    this.toggle = document.querySelector('.navbar__toggle');
-    this.links = document.querySelector('.navbar__links');
+    this.toggle   = document.querySelector('.navbar__toggle');
+    this.links    = document.querySelector('.navbar__links');
     this.allLinks = document.querySelectorAll('.navbar__links a');
-
     this._init();
   }
 
   _init() {
-    // Mobile toggle
-    if (this.toggle && this.links) {
-      this.toggle.addEventListener('click', () => {
-        this.links.classList.toggle('nav--open');
-      });
+    if (this.toggle) {
+      this.toggle.addEventListener('click', () => this._toggleMenu());
     }
 
-    // Close menu when clicking a link
     this.allLinks.forEach(link => {
       link.addEventListener('click', () => {
-        if (this.links) {
-          this.links.classList.remove('nav--open');
-        }
+        if (this.links) this.links.classList.remove('nav--open');
       });
     });
 
     this._setActiveLink();
   }
 
-  _setActiveLink() {
-    const currentPage =
-      window.location.pathname.split('/').pop() || 'index.html';
+  _toggleMenu() {
+    this.links.classList.toggle('nav--open');
+  }
 
+  _setActiveLink() {
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     this.allLinks.forEach(link => {
       const href = link.getAttribute('href');
       if (href === currentPage) {
@@ -45,37 +41,62 @@ class Navbar {
   }
 }
 
-class Tabs {
-  constructor(selector) {
-    this.containers = document.querySelectorAll(selector);
+
+class TabGroup {
+  /**
+   * Controls ONE independent tab group.
+   * @param {HTMLElement} container - the .tabs wrapper element
+   */
+  constructor(container) {
+    this.container = container;
+    this.buttons   = Array.from(container.querySelectorAll(':scope > .tabs__nav > .tabs__btn'));
+    this.panels    = Array.from(container.querySelectorAll(':scope > .tabs__panel'));
     this._init();
   }
 
   _init() {
-    this.containers.forEach(container => {
-      const buttons = container.querySelectorAll('.tabs__btn');
-      const panels = container.querySelectorAll('.tabs__panel');
+    this.buttons.forEach(btn => {
+      btn.addEventListener('click', () => this._activate(btn));
+    });
+  }
 
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const target = btn.dataset.tab;
+  _activate(activeBtn) {
+    const target = activeBtn.dataset.tab;
 
-          // update buttons
-          buttons.forEach(b => b.classList.remove('tab--active'));
-          btn.classList.add('tab--active');
+    // Update buttons — only inside THIS container's nav
+    this.buttons.forEach(b => b.classList.remove('tab--active'));
+    activeBtn.classList.add('tab--active');
 
-          // update panels
-          panels.forEach(panel => {
-            panel.classList.toggle(
-              'tab--active',
-              panel.dataset.tab === target
-            );
-          });
-        });
-      });
+    // Update panels — only direct child panels of THIS container
+    this.panels.forEach(panel => {
+      if (panel.dataset.tab === target) {
+        panel.classList.add('tab--active');
+      } else {
+        panel.classList.remove('tab--active');
+      }
     });
   }
 }
+
+
+class TabManager {
+  /**
+   * Finds every .tabs element on the page and gives each
+   * its own independent TabGroup instance.
+   */
+  constructor() {
+    this.groups = [];
+    this._init();
+  }
+
+  _init() {
+    const tabContainers = document.querySelectorAll('.tabs');
+    tabContainers.forEach(container => {
+      this.groups.push(new TabGroup(container));
+    });
+  }
+}
+
 
 class ScrollAnimator {
   constructor() {
@@ -87,7 +108,7 @@ class ScrollAnimator {
     if (!this.elements.length) return;
 
     const observer = new IntersectionObserver(
-      entries => {
+      (entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('fade-up');
@@ -102,27 +123,30 @@ class ScrollAnimator {
   }
 }
 
-/* ── INIT EVERYTHING ── */
+
+class BackToTop {
+  constructor() {
+    this.btn = document.getElementById('topBtn');
+    if (!this.btn) return;
+    this._init();
+  }
+
+  _init() {
+    window.addEventListener('scroll', () => {
+      this.btn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+
+    this.btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+}
+
+
+/* ── Bootstrap on DOM ready ── */
 document.addEventListener('DOMContentLoaded', () => {
   new Navbar();
-  new Tabs('.tabs');
+  new TabManager();   // handles ALL tab groups including nested ones
   new ScrollAnimator();
+  new BackToTop();
 });
-
-
-// Back to top button (safe version)
-const topBtn = document.getElementById("topBtn");
-
-if (topBtn) {
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 200) {
-      topBtn.style.display = "block";
-    } else {
-      topBtn.style.display = "none";
-    }
-  });
-
-  topBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-}
